@@ -1,0 +1,127 @@
+@reference "tailwindcss/theme.css";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tailwindcss";
+@tailwind utilities;
+
+
+
+/*──────────────────────────────*\
+*            BASE               *
+\*──────────────────────────────*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-zinc-900 text-zinc-50 ;
+}
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*──────────────────────────────*\
+*           typography        *
+\*──────────────────────────────*/
+
+.headline-1{
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa,#a1a1aa);
+
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-1{
+  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15]
+}
+
+
+/*──────────────────────────────*\
+*           UTILITIES         *
+\*──────────────────────────────*/
+
+.material-symbols-rounded{
+  @apply w-[1em] h-[1em] overflow-hidden ;
+  font-variation-settings: "FILL" 0 , "wght" 400, "GRAD" 0 , "opsz" 24;
+}
+
+.container {
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+
+.img-box {
+  @apply bg-zinc-700 overflow-hidden ;
+}
+
+.img-cover {
+  @apply w-full object-cover ;
+}
+
+/*──────────────────────────────*\
+*           COMPONENTS          *
+\*──────────────────────────────*/
+
+/* Menu Button */
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center 
+         bg-zinc-50/10 rounded-xl 
+         hover:bg-zinc-50/15 
+         transition-[transform,background-color] 
+         active:scale-95 
+         border-none outline-none ring-0;
+}
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+  @apply absolute top-full mt-2 right-0 min-w-40 p-2 
+         bg-zinc-50/10 rounded-2xl ring-inset ring-1 ring-zinc-50/5 
+         scale-90 isolate  opacity-0 invisible 
+         transition-[opacity,transform,filter] 
+         md:static md:flex md:items-center md:mt-0 
+         md:opacity-100  md:visible md:scale-100 
+         ;
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100  visible;
+}
+
+
+/* Nav Links */
+.nav-link {
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide 
+         text-zinc-300 hover:text-zinc-200 
+         transition-colors;
+}
+
+.nav-link.active {
+  @apply text-zinc-900 duration-500;
+}
+
+
+/* Active Box Inside Navbar */
+.navbar .active-box {
+  @apply absolute top-2 left-2 right-2 h-9 
+         bg-zinc-50 rounded-lg z-0 
+         transition-[top,left] duration-500;
+}
+
+.btn {
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color] ;
+}
+
+.btn-secondary {
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80 font-[Poppins] no-underline;
+}
+
+
