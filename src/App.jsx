@@ -17,6 +17,7 @@ import Highlights from "./components/highlights";
 import Projects from "./components/project";
 import Contact from "./components/Contact";
 import ImageViewer from "./components/ImageViewer"; // ⬅️ Import the new component
+import Certificates from './components/Certificates';
 
 const MainContent = () => (
   <>
